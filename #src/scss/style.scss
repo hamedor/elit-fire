@@ -1,0 +1,194 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+@import "fonts";
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "LabGrotesque";
+$fontWeight:"400";
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+
+//<ПЕРЕМЕННЫЕ>
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1440;
+$md1: $maxWidthContainer + 123;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #1d1d1c;
+$fontColor: #949494;
+
+//</ПЕРЕМЕННЫЕ>
+
+//ОБЩИЕ ПАРАМЕТРЫ
+@import "null";
+body {
+	background: url('../img/noise.svg');
+	
+	font-family: $fontFamily;
+	font-weight: $fontWeight;
+	color: $fontColor;
+	&._lock {
+		overflow: hidden;
+	}
+}
+a{
+	color: $fontColor;
+}
+
+.title{
+	font-size: rem(40);
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	background: linear-gradient(240.22deg, #FFFFFF 31.8%, rgba(255, 255, 255, 0));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: rem(60);
+}
+
+
+.button{
+	width: rem(284);
+	height: rem(60);
+	background: linear-gradient(90deg, rgba(249,139,77,1) 0%, rgba(255,217,196,1) 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #121212;
+	cursor: pointer;
+}
+.button:hover{
+	background: linear-gradient(90deg, rgb(245, 236, 231) 0%, rgb(71, 49, 38) 100%);
+}
+.button button{
+	color: #000;
+}
+
+.text--large{
+	font-weight: 300;
+	font-size: rem(20);
+	line-height: rem(33);
+	color: #fff;
+}
+.title--small{
+	font-size: rem(24);
+	font-family: "LabGrotesque";
+	font-weight: 400;
+	color: #fff;
+}
+
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 rem(120);
+}
+
+.lock{
+    overflow-y: hidden;
+}
+
+
+@import "header";
+@import "footer";
+@import "home";
+
+
+
+.page {
+	flex: 1 1 auto;
+}
+//MEDIA
+@media (max-width: 1500px) {
+	html{
+		font-size: 15px;
+	}
+}
+@media (max-width: 1400px) {
+	html{
+		font-size: 14px;
+	}
+}
+@media (max-width: 1280px) {
+	html{
+		font-size: 13px;
+	}
+}
+@media (max-width: 1191px) {
+	html{
+		font-size: 12px;
+	}
+}
+@media (max-width: 1103px) {
+	html{
+		font-size: 11px;
+	}
+}
+@media (max-width: 1009px) {
+	html{
+		font-size: 10px;
+	}
+	._container{
+		padding: 0 rem(40);
+	}
+}
+@media (max-width: 829px) {
+	html{
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 769px) {
+	html{
+		font-size: 16px;
+	}
+	.button{
+		width: 100%;
+		height: 8rem;
+		font-size: 2rem
+	}
+	.text--large{
+		font-size: 1.5rem;
+	}
+
+}
+
+
+@media (max-width: 634px) {
+	html{
+		font-size: 14px;
+	}
+}
+@media (max-width: 550px) {
+	html{
+		font-size: 12px;
+	}
+}
+@media (max-width: 469px) {
+	html{
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 398px) {
+	html{
+		font-size: 8px;
+	}
+}

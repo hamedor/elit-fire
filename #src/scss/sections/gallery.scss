@@ -1,0 +1,52 @@
+.gallery {
+   
+    &__content {
+    }
+
+
+    &__block {
+    }
+}
+
+.block-gallery {
+
+    &__title {
+        margin-top: rem(90);
+        text-align: center;
+    }
+
+
+    &__flex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: rem(35);
+    }
+
+    &__image {
+        width: rem(370);
+        height: rem(267);
+
+        background-color: #000;
+    }
+    &__image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 769px) {
+    .block-gallery{
+        &__flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__image{
+            margin-top: 1rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+ 
+}

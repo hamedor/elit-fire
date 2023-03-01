@@ -1,0 +1,129 @@
+<section class="calculator">
+    <div class="calculator__content _container">
+        <h2 class="calculator__title title">
+            Вы автор вашего камина
+        </h2>
+
+        <div class="calculator__flex">
+            <div class="calculator__column">
+                <div class="calculator__image">
+                    <img src="img/calculator/background.png" alt="фото камина">
+                </div>
+
+                <div class="calculator__row">
+                    <div class="calculator__column">
+                        <h5 class="calculator__title--small">длина</h5>
+                        <p class="calculator__text">6.5 м</p>
+                    </div>
+                    <div class="calculator__column">
+                        <h5 class="calculator__title--small">лицевая панель</h5>
+                        <div class="calculator__color"></div>
+                    </div>
+                 
+                </div>
+            </div>
+
+            <div class="calculator__column">
+                <h5 class="calculator__title--small">выберите длину</h5>
+                <div class="calculator__flex--column">
+                    <p class="calculator__text">0.5<span>м</span></p>
+                    <input id="width" class="calculator__range" min="0.5" max="10" step="0.5" type="range">
+                    <p class="calculator__text">10<span>м</span></p>
+                </div>
+
+                <h5 class="calculator__title--small">лицевая панель</h5>
+                <div  class="slider--small">
+                    <div id="slider" class="slider__items">
+                        <div class="slider__item slider__item--small slider4">
+                            <img src="img/calculator/slide1.jpg" alt="лицевая панель">
+                        </div>
+                        <div class="slider__item slider__item--small slider4">
+                            <img src="img/calculator/slide2.jpg"  alt="лицевая панель">
+                        </div>
+                        <div class="slider__item slider__item--small slider4">
+                            <img src="img/calculator/slide3.jpg"  alt="лицевая панель">
+                        </div>
+                        <div class="slider__item slider__item--small slider4">
+                            <img src="img/calculator/slide4.jpg"  alt="лицевая панель">
+                        </div>
+                    </div>
+
+                    <div class="slider__control--large">
+                        <button onclick="prevSlide(3)" class="slider__prev"></button>
+                        <button onclick="nextSlide(3)" class="slider__next"></button>
+                    </div>
+
+                <div class="slider__hrContainer">
+                    <hr class="slider__hr">
+                    <hr class="slider__hr">
+                    <hr class="slider__hr">
+                    <hr class="slider__hr">
+                </div>
+                 
+                </div>
+
+                <h5 class="calculator__title--small">дополнительные функции</h5>
+
+                <form class="calculator__checkboxForm" autocomplete="off">
+                <div class="calculator__checkboxColumn">
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="kids" name="kids">
+                        <label for="kids">Защита от детей</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox"  id="wifi" name="wifi">
+                        <label for="wifi">Wi-Fi</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="delivery" name="delivery">
+                        <label for="delivery">Доставка</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="garanty" name="garanty">
+                        <label for="garanty">Продленная гарантия</label>
+                    </div>
+                </div>
+                <div class="calculator__checkboxColumn">
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="kids" name="kids">
+                        <label for="kids">Защита от детей</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox"  id="wifi" name="wifi">
+                        <label for="wifi">Wi-Fi</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="delivery" name="delivery">
+                        <label for="delivery">Доставка</label>
+                    </div>
+
+                    <div class="calculator__checkbox">
+                        <input class="calculator__checkboxItem" type="checkbox" id="garanty" name="garanty">
+                        <label for="garanty">Гарантия</label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator__row">
+                <div class="calculator__column">
+                    <h5 class="calculator__title--small">стоимость</h5>
+                    <div class="calculator__price"><p id="price">99 000</p> <span>&#8381;</span></div>
+                </div>
+                
+        
+                <div class="calculator__button button">
+                    <button type="button">Оставить заявку</button>
+                </div>
+            </div>
+            </div>
+
+         
+        </div>
+
+    </div>
+</section>

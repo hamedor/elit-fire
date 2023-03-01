@@ -1,0 +1,128 @@
+
+.footer {
+    background-color: #121212;
+    padding-top: rem(72);
+    padding-bottom: rem(40);
+    position: relative;
+
+    &__flex {
+        display: flex;
+        margin-bottom: rem(128);
+      
+    }
+
+    &__column:nth-child(2){
+        margin-left: rem(217);
+    }
+    &__column:last-child{
+        margin-left: auto;
+    }
+
+    &__button {
+        width: rem(279);
+        height: rem(60);
+        background-color: transparent;
+        border: 1px solid #CEB787;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+    }
+    &__button button{
+        color: #fff;
+    }
+    &__button:hover{
+        background-color: #CEB787;
+    }
+
+    &__hr {
+        width: 100%;
+        height: 1px;
+        background-color: #232323;
+        position: absolute;
+        left: 0;
+        bottom: rem(99);
+       
+    }
+
+
+    &__row {
+        display: flex;
+        margin-top: rem(40);
+       
+       
+    }
+
+    &__text--grey {
+        margin-left: rem(110);
+    }
+
+
+    &__link {
+        margin-left: auto;   
+    }
+    &__link:hover{
+        color: #FFCF7A;
+    }
+}
+
+.item-footer {
+    margin-top: rem(52);
+    &__text--small {
+        font-weight: 300;
+        font-size: rem(14);
+        color: #949494;
+    }
+
+    &__text--medium {
+        font-weight: 300;
+        font-size: rem(22);
+        margin-top: rem(37);
+    }
+    &__text--medium a,
+    &__text--medium {
+        color: #fff;
+        max-width: rem(282);
+    }
+    &__text--medium a:hover{
+        color: #FFCF7A;
+    }
+}
+@media(max-width:769px){
+    .footer{
+        &__column:nth-child(2),
+        &__column:last-child{
+            margin-left: unset
+        }
+        &__row{
+            flex-direction: column;
+        }
+        &__text--grey, &__link{
+            margin-left: unset;
+        }
+        &__flex{
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+        &__hr{
+            bottom: 10rem;
+        }
+        &__link{
+            margin-top: 1rem;
+        }
+        &__text--grey{
+            margin-top: 0.5rem;
+        }
+        &__item{
+            margin-top: 2rem;
+        }
+        
+    }
+    .item-footer{
+        &__text--medium{
+            margin-top: 0.8rem;
+        }
+        
+    }
+}

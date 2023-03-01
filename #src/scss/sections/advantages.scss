@@ -1,0 +1,275 @@
+.advantages {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text{
+        text-align: center;
+        width: rem(544);
+        margin: rem(21) auto;
+    }
+
+    &__background {
+        background-image: url('../img/advantages/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: rem(429);
+        width: 100%;
+        position: relative;
+    }
+
+
+    &__blur {
+        position: absolute;
+        height: rem(551);
+        width: rem(826);
+     
+        border-radius: rem(500);
+
+
+        background: rgba(245, 157, 93, 0.45);
+        filter: blur(150px);
+        border-radius: 300px;
+        left: rem(108);
+    }
+
+
+    &__advList {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: rem(40);
+        margin-bottom: rem(42);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text--small {
+        margin-left: rem(32);
+        width: rem(179);
+        font-weight: 300;
+        line-height: rem(24);
+    }
+  
+	&__refill {
+		display: flex;
+        height: rem(716);
+        margin-top: rem(160);
+    }
+
+
+}
+
+
+.refill-adv {
+
+
+		&__column {
+              flex: 1;
+              position: relative;
+		}
+
+		&__title--left {
+            position: relative;
+            z-index: 2;
+		}
+
+		&__text--left {
+            margin-top: rem(23);
+             width: rem(410);
+             position: relative;
+             z-index: 2;
+		}
+
+		&__background--two {
+            background-image: url('../img/advantages/background2.png');
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-size: contain;
+            width: 100%;
+            height: rem(520);
+
+        position: relative;
+		}
+        &__blur{
+            width: rem(927);
+            height: rem(623);
+            position: absolute;
+            background-color: rgba(0,0,0,.55);
+            filter: blur(250px);
+            border-radius: 300px;
+            transform: rotate(-45deg);
+            z-index: 1;
+            left: rem(-361);
+            top: rem(93);
+        }
+        &__contentCircle{
+            position: absolute;
+            background: radial-gradient( #FFFFFF 0.31%, #FFE2A4 59.23%, #FFD47C 100%);
+            width: rem(151);
+            height: rem(151);
+            border-radius: 50%;
+            right: rem(24);
+            top: rem(64);
+            z-index: 2;
+        }
+        &__text--small{
+            text-align: center;
+        }
+        &__contentCircle div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            
+        }
+        &__yellowBlur{
+            background: rgba(175, 152, 112, 0.34);
+            filter: blur(75px);
+            border-radius: 300px;
+            height: rem(420);
+            width: rem(335);
+            position: absolute;
+            right: rem(24);
+            top: rem(64);
+            z-index: 1;
+        }
+        &__yellowBlur2{   
+            background: rgba(255,207,122,.72);
+            filter: blur(75px);
+            border-radius: 300px;
+            height: 22.25rem;
+            width: 16.938rem;
+            position: absolute;
+            right: -2.5rem;
+            top: 0rem;
+            z-index: 1;           
+        }
+        &__yellowBlur3{   
+            background: rgba(201, 115, 53, 0.45);
+            filter: blur(75px);
+            border-radius: 300px;
+            height: rem(386);
+            width: rem(269);
+            position: absolute;
+            right: 8.5rem;
+            top: 0rem;
+            z-index: 0;           
+        }
+        &__circle{
+            width: rem(194);
+            height: rem(194);
+            position: absolute;
+            top: rem(260);
+            right: rem(180);
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1px solid  #FFCF7A;
+        }
+        &__circle--small{
+            width: rem(98);
+            height: rem(98);
+            position: absolute;
+            top: rem(226);
+            right: rem(366);
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1px solid  #FFCF7A;
+        }
+        &__power{
+            position: absolute;
+            bottom: rem(32);
+        }
+        &__flex{
+            display: flex;
+            width: rem(100);
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__hr{
+            width: rem(32);
+            height: 2px;
+           background-color: #949494;
+        }
+        &__num{
+            font-weight: 700;
+            font-family: "ScaniaSansCY";
+            color: #000;
+            font-size: 2.5rem;
+        }
+        &__text--medium{
+            color: #000;
+            font-weight: 700;
+            font-family: "ScaniaSansCY";
+            margin-top: 0.2rem;
+        }
+        &__text--small{
+            margin-top: 1rem;
+            color: #000;
+            font-weight: 400;
+            font-family: "ScaniaSansCY";
+            font-size: rem(10);
+            width: rem(79);
+            line-height: rem(14);
+        }
+}
+
+
+
+.smart-adv {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__background {
+        background-image: url('../img/advantages/background4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: rem(600);
+        padding-top: rem(32);
+    }
+    &__text {
+        width: rem(600);
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 769px) {
+    .advantages{
+        &__background{
+            background-size: contain;
+            height: 15rem;
+        }
+        &__advList{
+            flex-wrap: wrap;
+        }
+        &__item:last-child{
+            margin-top: 1rem;
+        }
+        &__refill{
+            margin-top: 7rem;
+            height: 35rem;
+        }
+        &__smart{
+            margin-top: 20rem;
+        }
+    }
+    .smart-adv{
+        &__background{
+            height: 25rem;
+        }
+    }
+    .refill-adv {
+        flex-direction: column;
+        
+    }
+
+}

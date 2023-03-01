@@ -1,0 +1,122 @@
+
+
+.hero {
+    min-height: rem(599);
+    height: rem(599);
+
+    &__content {
+        display: flex;
+        height: 100%;
+    }
+
+
+    &__column {
+        height: 100%;
+        flex: 1;
+        
+    }
+    &__column:first-child{
+        position: relative;
+        z-index: 2;
+    }
+    &__blackLayer{
+        position: absolute;
+        background-color: rgba(0,0,0,.35);
+        height: 98rem;
+        width: 54rem;
+        transform: rotate(45deg);
+        border-radius: 300px;
+        filter: blur(250px);
+        left: -28rem;
+        top: -33rem;
+    }
+    &__wrapper{
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        font-size: rem(64);
+        text-transform: uppercase;
+        background: linear-gradient(#FFFFFF 49.37%, rgba(255, 255, 255, 0) 99.78%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        font-family: "LabGrotesque";
+        font-weight: 200;
+        letter-spacing: 0.05em;
+
+      
+    }
+
+
+    &__price {
+        margin-top: rem(29);
+        color: #FFCF7A;
+        font-size: rem(36);
+        font-weight: 300;
+    }
+    &__price span{
+        font-size: rem(18);
+    }
+
+
+    &__advantages {
+        margin-top: rem(89);
+        width: rem(295);
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+
+    &__text {
+        margin-top: rem(14);
+    }
+
+
+    &__background {
+        background-image:url('../img/hero/background.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: rem(429);
+        width: rem(700);
+        z-index: 3;
+        position: relative;
+        transform: translateX(rem(-80))
+    }
+    &__blur{
+        position: absolute;
+        height: rem(88);
+        width: rem(201);
+        background-color:  #A74E02;;
+        border-radius: rem(500);
+        filter: blur(rem(100));
+        transform: rotate(161.87deg);
+        top: rem(30);
+        right: rem(170);
+    }
+}
+
+@media (max-width: 769px) {
+
+    .hero{
+        height: 50rem;
+        margin-top: 2rem;
+        &__content {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        &__background{
+            transform: translate(-1rem);
+            transform: translateY(-2rem);
+
+            height: 21.813rem;
+            width: 39.75rem;
+        }
+        &__title{
+            font-size: rem(56);
+        }
+    }
+ 
+}

@@ -1,0 +1,210 @@
+.calculator {
+    padding-top: rem(80);
+    padding-bottom: rem(100);
+
+    &__title{
+        text-align: center;
+    }
+    &__title--small {
+        text-align: left;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: rem(12);
+        color: rgba(255, 255, 255, 0.5);
+       
+    }
+    &__title--small:not(:first-child){
+      margin-top: rem(20);
+    }
+
+
+    &__flex {
+        display: flex;
+        margin-top: rem(67);
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__flex--column{
+        margin-top: rem(16);
+      
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__image {
+        width: rem(533);
+        height: rem(374);
+    }
+    &__image img{
+      width: 100%;
+      height: auto;
+  }
+
+
+    &__row{
+      display: flex;
+      margin-top: rem(68);
+
+      align-items: center;
+    }
+    &__column{
+      flex:1 1;
+    }
+    &__color{
+      width: rem(28);
+      height: rem(28);
+      border-radius: 50%;
+      background-color:  #B8542A;
+    }
+
+    &__price {
+      font-size: rem(36);
+      color: #FFCF7A;
+      font-weight: 300;
+      display: flex;
+    }
+    &__text{
+      color: #fff;
+    }
+    &__checkboxForm{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: rem(26);
+    }
+    &__checkbox{
+      display: flex;  
+      justify-content: space-between;
+      width: rem(285); 
+    }
+    &__checkboxItem{
+      order: 2;
+      
+      margin-left: auto;
+    }
+    &__checkbox:not(:first-child){
+      margin-top: rem(10);
+    }
+    &__checkbox label{
+      color: #fff;
+      text-align: left;
+    }
+    &__button{
+      margin-left: auto
+    }
+    &__price,
+    &__color,
+    &__column &__text{
+      margin-top: 1rem;
+    }
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+
+
+  background-color: transparent;
+  width: rem(20);
+  height: rem(20);
+  border: 2px solid #CEB787;
+  border-radius: 2px;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  background-color: transparent;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  
+
+}
+input[type="checkbox"]:checked::before {
+  background-color: #CEB787;
+  color: #000;
+  content: "+";
+  padding-bottom: 19px;
+  font-size: 16px;
+  transform: scale(1.6,1);
+}
+
+#width {
+  margin-top: 1rem;
+  border-radius: 8px;
+  height: 1px;
+  width: rem(400);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -11px; /* Centers thumb on the track */
+  background-color: #FFCF7A;
+  border-radius: 0rem;
+  height: rem(30);
+  width: rem(30);
+ 
+}
+
+
+input[type="range"]::-moz-range-thumb {
+  background-color:  #FFCF7A;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0rem;
+  height: rem(30);
+  width: rem(30);
+  
+}
+
+@media (max-width: 769px) {
+  .calculator{
+    &__flex{
+      flex-direction: column;
+     
+    }
+    &__row{
+      margin-top: 8rem;
+    }
+    &__image{
+      width: 100%;
+    }
+    &__column{
+      margin-top: 1rem
+    }
+    &__price{
+      width: 14rem;
+    }
+    &__title--small{
+      font-size: 2rem;
+    }
+    &__title--small:not(:first-child){
+        margin-top: 5rem;
+    }
+    &__text{
+      font-size: 1.5rem;
+    }
+    &__checkbox{
+      font-size: 1.5rem;
+    }
+    &__checkbox:not(:first-child){
+      margin-top: 5rem;
+    }
+  }
+  input[type="checkbox"] {
+    width: 3rem;
+    height: 3rem;
+  }
+}
